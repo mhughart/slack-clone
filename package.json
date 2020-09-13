@@ -32,14 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   }
-=======
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "author": "Michael Hughart",
-  "license": "ISC",
-  "devDependencies": {}
->>>>>>> fa880e8d22fa5945ed5e70dd9d5ecd4685b17d22
 }
