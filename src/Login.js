@@ -29,7 +29,7 @@ function Login() {
 					src='https://www.logo.wine/a/logo/Slack_Technologies/Slack_Technologies-Mark-Black-Logo.wine.svg'
 					alt=''
 				/>
-				<h1>Rabisu Design's Slack Clone</h1>
+				<h1>Slack Clone</h1>
 				<p>rabisudesign.slack.com</p>
 				<Button onClick={signIn}>Sign In with Google</Button>
 			</div>
