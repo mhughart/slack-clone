@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import './Sidebar.css';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import CreateIcon from '@material-ui/icons/Create';
@@ -13,8 +13,11 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import db from './firebase';
+import { auth, provider } from './firebase';
 import { useStateValue } from './StateProvider';
+import { Tooltip, IconButton } from '@material-ui/core';
 
 function Sidebar() {
 	const [channels, setChannels] = useState([]);
@@ -41,8 +44,15 @@ function Sidebar() {
 						{user?.displayName}
 					</h3>
 				</div>
-				<CreateIcon />
+				<Tooltip title='Create'>
+					<CreateIcon />
+				</Tooltip>
+
+				<Tooltip title='Log Out'>
+					<ExitToAppIcon />
+				</Tooltip>
 			</div>
+
 			<SidebarOption Icon={InsertCommentIcon} title='Threads' />
 			<SidebarOption Icon={InboxIcon} title='Mentions & Reactions' />
 			<SidebarOption Icon={DraftsIcon} title='Saved Items' />
@@ -51,17 +61,15 @@ function Sidebar() {
 			<SidebarOption Icon={AppsIcon} title='Apps' />
 			<SidebarOption Icon={FileCopyIcon} title='File Browser' />
 			<SidebarOption Icon={ExpandLessIcon} title='Show less' />
-			<hr />
-			<SidebarOption Icon={ExpandMoreIcon} title='Channels' />
+
 			<hr />
 			<SidebarOption
 				Icon={AddIcon}
 				addChannelOption
 				title='Add Channel'
 			/>
-
-			{/* Connect to db and list all the channels */}
-			{/* <SidebarOption ... /> */}
+			<hr />
+			<SidebarOption Icon={ExpandMoreIcon} title='Channels' />
 			{channels.map((channel) => (
 				<SidebarOption title={channel.name} id={channel.id} />
 			))}
