@@ -44,9 +44,6 @@ function Sidebar() {
 						{user?.displayName}
 					</h3>
 				</div>
-				<Tooltip title='Create'>
-					<CreateIcon />
-				</Tooltip>
 
 				<Tooltip title='Log Out'>
 					<ExitToAppIcon />
