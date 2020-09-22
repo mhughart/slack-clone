@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from 'react';
 import './Sidebar.css';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-// import CreateIcon from '@material-ui/icons/Create';
+import CreateIcon from '@material-ui/icons/Create';
 import InsertCommentIcon from '@material-ui/icons/InsertComment';
 import SidebarOption from './SidebarOption';
 import InboxIcon from '@material-ui/icons/Inbox';
@@ -13,7 +13,7 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+// import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import { Tooltip, IconButton } from '@material-ui/core';
@@ -44,8 +44,8 @@ function Sidebar() {
 					</h3>
 				</div>
 
-				<Tooltip title='Log Out'>
-					<ExitToAppIcon />
+				<Tooltip title='Create'>
+					<CreateIcon />
 				</Tooltip>
 			</div>
 
